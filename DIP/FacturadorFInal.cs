@@ -8,12 +8,17 @@ namespace DIP
 {
     public class FacturadorFInal
     {
+
+        //public INotificador _notificador { get; set; }
+
+        public Cliente Cliente { get; set; }
+
         //Inyeccion de Dependecias
         private INotificador _notificador;
-        
-        public  FacturadorFInal( INotificador notificador)
+
+        public FacturadorFInal(INotificador notificador)
         {
-            _notificador=notificador;
+            _notificador = notificador;
         }
 
         public void RealizarPedido()

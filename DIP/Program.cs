@@ -43,8 +43,17 @@ void ConSolid()
 
 
 
+//FacturadorFInal facturadorFInal = new FacturadorFInal();
+
+//facturadorFInal.ReservarPedido();
+//facturadorFInal.RealizarPedido();
+//facturadorFInal.CancelarPedido();
+
+
 //Inyeccion de Dependecias
-FacturadorFInal facturadorSMS = new FacturadorFInal( new SMS() );
+FacturadorFInal facturadorSMS = new FacturadorFInal(new SMS());
+facturadorSMS.Cliente = new Cliente { Apellidos = "Torrico" };
+
 facturadorSMS.ReservarPedido();
 facturadorSMS.RealizarPedido();
 facturadorSMS.CancelarPedido();
